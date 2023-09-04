@@ -14,13 +14,17 @@ const images = [
 ];
 const gallery = document.querySelector('.gallery');
 const renderGallery = ({ url, alt }) =>
-  `<li class = js_imgList><img 
+  `<li><img 
   src="${url}"
   alt="${alt}" 
-  width = "300"
-  height = "auto">
-  
+  width = "300" 
+  height = "200">
   </li>`;
 
 const galleryMarkup = images.map(renderGallery).join('');
 gallery.insertAdjacentHTML('beforeend', galleryMarkup);
+gallery.style.listStyle = 'none'
+gallery.style.display = 'flex';
+gallery.style.gap = '50px'
+gallery.style.justifyContent = 'center'
+// gallery.style.border-radius = '0px 0px 4px 4px';
